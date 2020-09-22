@@ -54,7 +54,7 @@ nfpm:
 
   formats:
     - deb
-    - rpm
+#    - rpm
 
   # Packages your package depends on.
   dependencies:
