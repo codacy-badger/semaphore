@@ -82,6 +82,7 @@ tasks:
       - '{{ if eq OS "windows" }} .\\node_modules\\.bin\\pug.cmd --pretty {{ else }} ./node_modules/.bin/pug {{ end }} resources/pug --out public/html'
       - '{{ if eq OS "windows" }} xcopy node_modules\\font-awesome\\fonts public\\fonts /y {{ else }} cp node_modules/font-awesome/fonts/* public/fonts {{ end }}'
       - node bundler.js
+
   compile:be:
     desc: Runs Packr for static assets
     sources:
@@ -98,13 +99,13 @@ tasks:
         sh: git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null | sed -n 's/^\([^^~]\{1,\}\)\(\^0\)\{0,1\}$/\1/p'
       BRANCH:
         sh: git rev-parse --abbrev-ref HEAD
-      DIRTY:
-        # We must exclude the package-lock file as npm install can change it!
-        sh: git diff --exit-code --stat -- . ':(exclude)web/package-lock.json' ':(exclude)web/package.json'
       SHA:
         sh: git log --pretty=format:'%h' -n 1
       TIMESTAMP:
         sh: date +%s
+      DIRTY:
+        # We must exclude the package-lock file as npm install can change it!
+        sh: git diff --exit-code --stat -- . ':(exclude)web/package-lock.json' ':(exclude)web/package.json'
 
   compile:api:hooks:
     dir: ./.dredd/hooks
