@@ -237,7 +237,6 @@ workflows:
 
   build-test:
     jobs:
-      - test:docker
       - test:golang
       - test:integration:hooks
       - test:integration
@@ -260,7 +259,6 @@ workflows:
       - deploy:dev:
           requires:
             - build
-            - test:docker
           filters:
             branches:
               only: develop
