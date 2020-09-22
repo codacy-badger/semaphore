@@ -22,7 +22,7 @@ All releases after 2.4.1 are signed with the gpg public key
 
 PR's & UX reviews are welcome!
 
-Please follow the [contribution](https://github.com/ansible-semaphore/semaphore/blob/develop/CONTRIBUTING.md) guide. Any questions, please open an issue.
+Please follow the [contribution](./blob/develop/CONTRIBUTING.md) guide. Any questions, please open an issue.
 
 ## License
 
