@@ -253,6 +253,7 @@ func (conf *ConfigType) GenerateCookieSecrets() {
 	conf.CookieEncryption = base64.StdEncoding.EncodeToString(encryption)
 }
 
+// Scan creates configuration.
 //nolint: gocyclo
 func (conf *ConfigType) Scan() {
 	fmt.Print(" > DB Hostname (default 127.0.0.1:3306): ")

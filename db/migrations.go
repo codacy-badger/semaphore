@@ -12,6 +12,7 @@ import (
 var dbAssets = packr.NewBox("./migrations")
 
 // CheckExists queries the database to see if a migration table with this version id exists already
+//nolint: staticcheck
 func (version *Version) CheckExists() (bool, error) {
 	exists, err := Mysql.SelectInt("select count(1) as ex from migrations where version=?", version.VersionString())
 

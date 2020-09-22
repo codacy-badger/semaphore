@@ -236,7 +236,7 @@ func (t *task) populateDetails() error {
 
 	if t.sshKey.Type != "ssh" {
 		t.log("Non ssh-type keys are currently not supported: " + t.sshKey.Type)
-		return errors.New("Unsupported SSH Key")
+		return errors.New("unsupported SSH Key")
 	}
 
 	// get inventory
@@ -269,7 +269,7 @@ func (t *task) populateDetails() error {
 	}
 	if t.repository.SSHKey.Type != "ssh" {
 		t.log("Repository Access Key is not 'SSH': " + t.repository.SSHKey.Type)
-		return errors.New("Unsupported SSH Key")
+		return errors.New("unsupported SSH Key")
 	}
 
 	// get environment
