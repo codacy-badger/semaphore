@@ -155,15 +155,15 @@ jobs:
       - store_artifacts:
           path: /go/src/github.com/fiftin/semaphore/coverage.out
 
-  test:integration:
-    machine: true
-    steps:
-      - checkout
-      - run: |
-          cd /home/circleci/bin
-          sudo curl -L https://github.com/go-task/task/releases/download/v2.0.1/task_linux_amd64.tar.gz | tar xvz
-          cd -
-      - run: context=ci task dc:up
+#  test:integration:
+#    machine: true
+#    steps:
+#      - checkout
+#      - run: |
+#          cd /home/circleci/bin
+#          sudo curl -L https://github.com/go-task/task/releases/download/v2.0.1/task_linux_amd64.tar.gz | tar xvz
+#          cd -
+#      - run: context=ci task dc:up
 
   test:db:migration:
     docker:
