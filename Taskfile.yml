@@ -121,7 +121,7 @@ tasks:
 
   watch:be:
     cmds:
-      - reflex -r '\.go$' -R '^node_modules/' -s -d none -- sh -c 'go build -i -o /tmp/semaphore_bin cli/main.go && /tmp/semaphore_bin -config $(pwd)/config.json'
+      - reflex -r '\.go$' -R '^.idea/' -R '^node_modules/' -s -d none -- sh -c 'go build -i -o /tmp/semaphore_bin cli/main.go && /tmp/semaphore_bin -config $(pwd)/config.json'
 
   watch:fe:
     dir: web
