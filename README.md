@@ -5,12 +5,12 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/89e0129c6ba64fe2b1ebe983f72a4eff)](https://www.codacy.com/app/ansible-semaphore/semaphore?utm_source=github.com&utm_medium=referral&utm_content=ansible-semaphore/semaphore&utm_campaign=Badge_Coverage)
 [![semaphore on discord](https://img.shields.io/badge/discord-semaphore%20community-738bd7.svg)](https://discord.gg/GXXTBVz)
 
-- [Releases](https://github.com/ansible-semaphore/semaphore/releases)
+- [Releases](./releases)
 - [Docker Hub](https://hub.docker.com/r/ansiblesemaphore/semaphore/)
-- [Install Instructions](https://github.com/ansible-semaphore/semaphore/wiki/Installation)
-- [Troubleshooting](https://github.com/ansible-semaphore/semaphore/wiki/Troubleshooting)
-- [Contribution Guide](https://github.com/ansible-semaphore/semaphore/blob/develop/CONTRIBUTING.md)
-- [Roadmap](https://github.com/ansible-semaphore/semaphore/projects)
+- [Install Instructions](./wiki/Installation)
+- [Troubleshooting](./wiki/Troubleshooting)
+- [Contribution Guide](./blob/develop/CONTRIBUTING.md)
+- [Roadmap](./projects)
 - [UI Walkthrough](https://blog.strangeman.info/ansible/2017/08/05/semaphore-ui-guide.html) (external blog)
 
 ## Release Signing
