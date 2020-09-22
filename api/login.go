@@ -10,8 +10,8 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/ansible-semaphore/semaphore/db"
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/db"
+	"github.com/fiftin/semaphore/util"
 
 	sq "github.com/masterminds/squirrel"
 	"golang.org/x/crypto/bcrypt"

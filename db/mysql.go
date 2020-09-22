@@ -3,7 +3,7 @@ package db
 import (
 	"database/sql"
 
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/util"
 	_ "github.com/go-sql-driver/mysql" // imports mysql driver
 	"gopkg.in/gorp.v1"
 	"time"

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/ansible-semaphore/semaphore/db"
+	"github.com/fiftin/semaphore/db"
 	"github.com/gorilla/context"
 	"github.com/gorilla/websocket"
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/util"
 	log "github.com/Sirupsen/logrus"
 )
 

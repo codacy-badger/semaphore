@@ -6,9 +6,9 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/ansible-semaphore/semaphore/api/sockets"
-	"github.com/ansible-semaphore/semaphore/db"
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/api/sockets"
+	"github.com/fiftin/semaphore/db"
+	"github.com/fiftin/semaphore/util"
 	log "github.com/Sirupsen/logrus"
 )
 

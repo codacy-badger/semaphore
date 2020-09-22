@@ -5,11 +5,11 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ansible-semaphore/semaphore/api/projects"
-	"github.com/ansible-semaphore/semaphore/api/sockets"
-	"github.com/ansible-semaphore/semaphore/api/tasks"
+	"github.com/fiftin/semaphore/api/projects"
+	"github.com/fiftin/semaphore/api/sockets"
+	"github.com/fiftin/semaphore/api/tasks"
 
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/util"
 	"github.com/gobuffalo/packr"
 	"github.com/gorilla/mux"
 	"github.com/russross/blackfriday"

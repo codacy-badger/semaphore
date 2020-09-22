@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"net/http"
 
-	"github.com/ansible-semaphore/semaphore/db"
+	"github.com/fiftin/semaphore/db"
 
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/util"
 	"github.com/gorilla/context"
 	"github.com/masterminds/squirrel"
 )

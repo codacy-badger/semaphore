@@ -5,7 +5,7 @@ import (
 	"time"
 
 	log "github.com/Sirupsen/logrus"
-	"github.com/ansible-semaphore/semaphore/util"
+	"github.com/fiftin/semaphore/util"
 )
 
 type taskPool struct {

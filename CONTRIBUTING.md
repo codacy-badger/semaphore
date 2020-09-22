@@ -23,7 +23,7 @@ export GOPATH=`pwd`
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 
-mkdir -p $GOPATH/src/github.com/ansible-semaphore && cd $GOPATH/src/github.com/ansible-semaphore
+mkdir -p $GOPATH/src/github.com/fiftin && cd $GOPATH/src/github.com/fiftin
 ```
 
 2) Clone semaphore (with submodules)
@@ -34,12 +34,18 @@ git clone --recursive git@github.com:ansible-semaphore/semaphore.git && cd semap
 
 3) Install dev dependencies
 
+For MacOS install fsevents manually:
+
+```
+cd web
+npm install fsevents
+```
+
 ```
 go get -u github.com/go-task/task/cmd/task
 task deps
 ```
 Windows users will additionally need to manually install goreleaser from https://github.com/goreleaser/goreleaser/releases
-
 
 4) Set up config, database & run migrations
 

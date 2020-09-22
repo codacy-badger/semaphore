@@ -67,7 +67,7 @@ func DoUpgrade(version string) error {
 		return err
 	}
 
-	fmt.Println("visit https://github.com/ansible-semaphore/semaphore/releases for the changelog")
+	fmt.Println("visit https://github.com/fiftin/semaphore/releases for the changelog")
 	go func() {
 		time.Sleep(time.Second * 3)
 		os.Exit(0)
