@@ -184,15 +184,6 @@ jobs:
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run: bin/semaphore --migrate -config config.json
 
-  test:docker:
-    docker:
-      - *golang-image
-    steps:
-      - *install-task-binary
-      - checkout
-      - setup_remote_docker
-      - run: context=prod task docker:test
-
   deploy:dev:
     docker:
       - *golang-image
