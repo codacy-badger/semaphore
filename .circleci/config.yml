@@ -45,7 +45,7 @@ aliases:
       name: unlock gpg key, trying to do this in the goreleaser step with env vars does not seem to work
       command: |
         echo $GPG_KEY | tr " " "\n" | base64 -d | gpg --import --batch
-        gpg --sign -u "9B25 8A9C 32B9 7E50 E753  3575 DE95 8D8F 20C7 845F" --pinentry-mode loopback --yes --batch --passphrase "${GPG_PASS}" --output unlock.sig --detach-sign README.md
+        gpg --sign -u "${$GPG_USER}" --pinentry-mode loopback --yes --batch --passphrase "${GPG_PASS}" --output unlock.sig --detach-sign README.md
         rm -f unlock.sig
 
   - &test-compile-changes
@@ -184,16 +184,16 @@ jobs:
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run: bin/semaphore --migrate -config config.json
 
-  deploy:dev:
-    docker:
-      - *golang-image
-    steps:
-      - *install-task-binary
-      - checkout
-      - setup_remote_docker
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: context=prod tag=develop task docker:build
-      - run: tag=develop task docker:push
+#  deploy:dev:
+#    docker:
+#      - *golang-image
+#    steps:
+#      - *install-task-binary
+#      - checkout
+#      - setup_remote_docker
+#      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+#      - run: context=prod tag=develop task docker:build
+#      - run: tag=develop task docker:push
 
   deploy:prod:
     docker:
