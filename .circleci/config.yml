@@ -217,7 +217,7 @@ workflows:
             - test:db:migration
           filters:
             branches:
-              ignore: master
+              only: master
 
 # Production deploys only happen if everything passes
 # and we have a tag starting with v
