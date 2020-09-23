@@ -29,7 +29,7 @@ mkdir -p $GOPATH/src/github.com/fiftin && cd $GOPATH/src/github.com/fiftin
 2) Clone semaphore (with submodules)
 
 ```
-git clone --recursive git@github.com:ansible-semaphore/semaphore.git && cd semaphore
+git clone --recursive git@github.com:fiftin/semaphore.git && cd semaphore
 ```
 
 3) Install dev dependencies

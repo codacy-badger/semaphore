@@ -1,8 +1,8 @@
 ![semaphore](web/public/img/logo.png?v=3)
 
 [![Circle CI](https://circleci.com/gh/fiftin/semaphore.svg?style=svg)](https://circleci.com/gh/fiftin/semaphore)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89e0129c6ba64fe2b1ebe983f72a4eff)](https://www.codacy.com/app/ansible-semaphore/semaphore?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ansible-semaphore/semaphore&amp;utm_campaign=Badge_Grade)
-[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/89e0129c6ba64fe2b1ebe983f72a4eff)](https://www.codacy.com/app/ansible-semaphore/semaphore?utm_source=github.com&utm_medium=referral&utm_content=ansible-semaphore/semaphore&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/89e0129c6ba64fe2b1ebe983f72a4eff)](https://www.codacy.com/app/fiftin/semaphore?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fiftin/semaphore&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/89e0129c6ba64fe2b1ebe983f72a4eff)](https://www.codacy.com/app/fiftin/semaphore?utm_source=github.com&utm_medium=referral&utm_content=fiftin/semaphore&utm_campaign=Badge_Coverage)
 [![semaphore on discord](https://img.shields.io/badge/discord-semaphore%20community-738bd7.svg)](https://discord.gg/GXXTBVz)
 
 - [Releases](./releases)

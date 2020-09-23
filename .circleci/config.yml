@@ -155,16 +155,6 @@ jobs:
       - store_artifacts:
           path: /go/src/github.com/fiftin/semaphore/coverage.out
 
-#  test:integration:
-#    machine: true
-#    steps:
-#      - checkout
-#      - run: |
-#          cd /home/circleci/bin
-#          sudo curl -L https://github.com/go-task/task/releases/download/v2.0.1/task_linux_amd64.tar.gz | tar xvz
-#          cd -
-#      - run: context=ci task dc:up
-
   test:db:migration:
     docker:
       - *golang-image
@@ -183,30 +173,6 @@ jobs:
           name: Wait for db
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 1m
       - run: bin/semaphore --migrate -config config.json
-
-#  deploy:dev:
-#    docker:
-#      - *golang-image
-#    steps:
-#      - *install-task-binary
-#      - checkout
-#      - setup_remote_docker
-#      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-#      - run: context=prod tag=develop task docker:build
-#      - run: tag=develop task docker:push
-
-  deploy:prod:
-    docker:
-      - *golang-image
-    steps:
-      - *install-task-binary
-      - checkout
-      - setup_remote_docker
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-      - run: context=prod tag=latest task docker:build
-      - run: tag=latest task docker:push
-      - run: docker tag ansiblesemaphore/semaphore:latest ansiblesemaphore/semaphore:$CIRCLE_TAG
-      - run: tag=$CIRCLE_TAG task docker:push
 
   # For releases to work in the ci you will need to have the following env vars set
   # GITHUB_TOKEN - token needs writes to make a release
@@ -239,7 +205,6 @@ workflows:
     jobs:
       - test:golang
       - test:integration:hooks
-#      - test:integration
       - build:local
       - test:db:migration:
           requires:
@@ -250,29 +215,13 @@ workflows:
           requires:
             - test:golang
             - test:db:migration
-#            - test:integration
           filters:
             branches:
               ignore: master
 
-# Dev deploys require all tests to pass and app builds
-#      - deploy:dev:
-#          requires:
-#            - build
-#          filters:
-#            branches:
-#              only: develop
-
 # Production deploys only happen if everything passes
 # and we have a tag starting with v
       - release:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^v.*/
-
-      - deploy:prod:
           filters:
             branches:
               ignore: /.*/
