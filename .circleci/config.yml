@@ -256,12 +256,12 @@ workflows:
               ignore: master
 
 # Dev deploys require all tests to pass and app builds
-      - deploy:dev:
-          requires:
-            - build
-          filters:
-            branches:
-              only: develop
+#      - deploy:dev:
+#          requires:
+#            - build
+#          filters:
+#            branches:
+#              only: develop
 
 # Production deploys only happen if everything passes
 # and we have a tag starting with v
