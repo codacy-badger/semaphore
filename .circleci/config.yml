@@ -104,7 +104,7 @@ jobs:
     steps:
       - *install-node
       - *install-task-binary
-      - run: sudo apk add rpm
+#      - run: sudo apk add rpm
       - checkout
       - *load-go-cache
       - *load-npm-cache
