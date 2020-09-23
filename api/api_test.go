@@ -1,11 +1,12 @@
 package api
 
 import (
-	"github.com/go-openapi/loads"
-	"github.com/go-openapi/spec"
 	"log"
 	"os"
 	"testing"
+
+	"github.com/go-openapi/loads"
+	"github.com/go-openapi/spec"
 )
 
 // TestApi Validates the api description in the root meets the swagger/openapi spec
@@ -25,6 +26,8 @@ func TestApiSchemaValidation(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
+
+	// this is broken right now, use cli `swagger validate ./api-docs.yml`
 
 	//if err := validate.Spec(document, strfmt.Default); err != nil {
 	//	t.Fatal(err)
